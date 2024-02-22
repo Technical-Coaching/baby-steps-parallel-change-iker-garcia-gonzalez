@@ -11,7 +11,7 @@ class AuthenticationClient:
         self.authenticationService = authenticationService
 
     def run(self):
-        authenticated = self.authenticationService.is_authenticated_old(33)
+        authenticated = self.authenticationService.is_authenticated("", 33)
         print("is authenticated: ", str(authenticated))
 
 
