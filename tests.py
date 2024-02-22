@@ -8,12 +8,12 @@ class AuthenticatorTests(unittest.TestCase):
     def test_administrator_is_always_authenticated(self):
         service = method.AuthenticationService()
         adminId = 12345
-        self.assertTrue(service.is_authenticated(adminId))
+        self.assertTrue(service.is_authenticated_old(adminId))
 
     def test_normal_user_is_not_authenticated_initially(self):
         service = method.AuthenticationService()
         normalUserId = 11111
-        self.assertFalse(service.is_authenticated(normalUserId))
+        self.assertFalse(service.is_authenticated_old(normalUserId))
 
 
 class ShoppingCartTests(unittest.TestCase):

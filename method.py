@@ -1,5 +1,5 @@
 class AuthenticationService:
-    def is_authenticated(self, id):
+    def is_authenticated_old(self, id):
         return self.is_authenticated2("", id)
 
     def is_authenticated2(self, role, id):
@@ -11,13 +11,13 @@ class AuthenticationClient:
         self.authenticationService = authenticationService
 
     def run(self):
-        authenticated = self.authenticationService.is_authenticated(33)
+        authenticated = self.authenticationService.is_authenticated_old(33)
         print("is authenticated: ", str(authenticated))
 
 
 class YetAnotherClient:
     def run(self):
-        AuthenticationService().is_authenticated(100)
+        AuthenticationService().is_authenticated_old(100)
 
 
 if __name__ == "__main__":
