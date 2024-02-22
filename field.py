@@ -1,22 +1,18 @@
 class ShoppingCart:
-    price = 0
-
     def __init__(self):
         self.prices = []
 
     def add(self, price):
-        self.price = price
         self.prices.append(price)
 
     def calculate_total_price(self):
-        sum(self.prices)
-        return self.price
+        return sum(self.prices)
 
     def has_discount(self):
         for price in self.prices:
             if price >= 100:
                 return True
-        return self.price >= 100
+        return False
 
     def number_of_products(self):
         return 1
