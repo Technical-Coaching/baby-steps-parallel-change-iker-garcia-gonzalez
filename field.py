@@ -9,6 +9,7 @@ class ShoppingCart:
         self.prices.append(price)
 
     def calculate_total_price(self):
+        sum(self.prices)
         return self.price
 
     def has_discount(self):
