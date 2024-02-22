@@ -1,7 +1,4 @@
 class AuthenticationService:
-    def is_authenticated_old(self, id):
-        return self.is_authenticated("", id)
-
     def is_authenticated(self, role, id):
         return id == 12345
 
